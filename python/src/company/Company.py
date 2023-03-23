@@ -12,6 +12,9 @@ class Company:
     def get_company_name(self) -> str:
         return self._company_name
 
+    # TODO: CRIO_TASK_MODULE_XCOMPANY
+    # Please define all the methods required here as mentioned in the XCompany BuildOut Milestone before implementing the logic.
+    # This will ensure that the project can be compiled successfully.
     def register_employee(self, employee_name: str, gender: Gender) -> None:
         self._employee_book[employee_name] = Employee(employee_name, gender)
 
@@ -45,6 +48,7 @@ class Company:
         return array
 
     def get_employee_hierarchy(self,manager_name: str) -> List[List[Employee]]:
+        #similar to tree traversal logic implementation
         array = []
         queue = []
         next_queue = []
@@ -58,11 +62,8 @@ class Company:
             if len(queue) == 0:
                 queue, next_queue = next_queue, []
                 answer.append(array)
-                array  = []
+                array = []
         return answer
-    # TODO: CRIO_TASK_MODULE_XCOMPANY
-    # Please define all the methods required here as mentioned in the XCompany BuildOut Milestone before implementing the logic.
-    # This will ensure that the project can be compiled successfully.
 
 
     

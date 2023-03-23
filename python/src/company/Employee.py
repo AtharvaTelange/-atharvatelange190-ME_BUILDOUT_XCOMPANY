@@ -30,9 +30,6 @@ class Employee:
     def get_direct_reports(self) -> List:
         return self._working_under
 
-    def get_team_mates(self) -> List:
-        return 0
-
     def __repr__(self) -> str:
         return f'Employee [name={self._name}, gender={self._gender.value}]'
 
